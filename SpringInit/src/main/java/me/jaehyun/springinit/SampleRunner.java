@@ -37,9 +37,9 @@ public class SampleRunner implements ApplicationRunner {
         System.out.println("==============");
         System.out.println(hello);
         System.out.println("==============");
-        logger.info("******************");
-        logger.info(hello);
-        logger.info(jaehyunProperties.getFullName());
-        logger.info(jaehyunProperties.getName());
+        logger.debug("******************");
+        logger.debug(hello);
+        logger.debug(jaehyunProperties.getFullName());
+        logger.debug(jaehyunProperties.getName());
     }
 }
