@@ -1,5 +1,7 @@
 package me.jaehyun.springinit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -15,6 +17,8 @@ public class SampleRunner implements ApplicationRunner {
 //
 //    @Value("${jaehyun.age}")
 //    private int age;
+
+    private Logger logger = LoggerFactory.getLogger(SampleRunner.class);
 
     // 프로퍼티 설정 클래스를 빈으로 등록 후 DI
     @Autowired
@@ -33,5 +37,9 @@ public class SampleRunner implements ApplicationRunner {
         System.out.println("==============");
         System.out.println(hello);
         System.out.println("==============");
+        logger.info("******************");
+        logger.info(hello);
+        logger.info(jaehyunProperties.getFullName());
+        logger.info(jaehyunProperties.getName());
     }
 }
